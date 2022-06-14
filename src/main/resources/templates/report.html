@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Results/Summary</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>Sl No: </th>
+			<th>Package: </th>
+			<th>Name: </th>
+			<th>Time in (S): </th>
+			<th>Status: </th>
+			<th>Error: </th>
+		</tr>
+		<tr th:each="test:${result}">
+			<td th:text="${test.no}">Number</td>
+			<td th:text="${test.package}">Name</td>
+			<td th:text="${test.name}">Info</td>
+			<td th:text="${test.time}">Number</td>
+			<td th:text="${test.status}">Name</td>
+			<td th:text="${test.error}">Info</td>
+		</tr>
+	</table>
+</body>
+</html>
